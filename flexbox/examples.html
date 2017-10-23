@@ -1,0 +1,151 @@
+<html lang="en">
+    <head>
+        <title>Example one flexbox</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style type="text/css">
+            .container{
+                display: flex;
+                width: 100%;
+                padding: 30px;
+                background-color: gainsboro;
+            }
+            .square {
+                width: 100px;
+                height: 100px;
+                margin: 4px;
+            }
+            .grow {
+                flex-grow: 1;
+            }
+            .short {
+                height: 130px;
+            }
+            .fat {
+                width: 300px;
+            }
+            .blue {
+                background-color: cornflowerblue;
+            }
+            .gold {
+                background-color: gold;
+            }
+            .red {
+                background-color: red;
+            }
+            .green {
+                background-color: green;
+            }
+            .column{
+                flex-direction: column;
+            }
+            .column_reverse {
+                flex-direction: column-reverse;
+            }
+            .start {
+                justify-content: flex-start;
+            }
+            .space_between {
+                justify-content: space-between;
+            }
+            .space_around {
+                justify-content: space-around;
+            }
+            .center {
+                justify-content: center;
+            }
+            .align {
+                height: 400px;
+            }
+            .center {
+                align-items: center;
+            }
+            .end {
+                align-items: flex-end;
+            }
+            .base {
+                align-items: baseline;
+            }
+            .stretch {
+                align-items: stretch;
+            }
+            #three {
+                flex-grow: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>display: flex;</h1>
+            <section class="container">
+                <div class="square green"></div>
+                <div class="square short gold"></div>
+                <div class="square red"></div>
+                <div class="square fat blue"></div>
+            </section>
+            <h1>flex-direction: column;</h1>
+            <section class="container column">
+                <div class="square green"></div>
+                <div class="square short gold"></div>
+                <div class="square red"></div>
+                <div class="square fat blue"></div>
+            </section>
+            <h1>flex-direction: column-reverse;</h1>
+            <section class="container column_reverse">
+                <div class="square green"></div>
+                <div class="square short gold"></div>
+                <div class="square red"></div>
+                <div class="square fat blue"></div>
+            </section>
+            <h1> justify-content: space-around;</h1>
+            <section class="container space_around">
+                <div class="square green"></div>
+                <div class="square gold"></div>
+                <div class="square red"></div>
+                <div class="square blue"></div>
+            </section>
+            <h1> justify-content: space-between;</h1>
+            <section class="container space_between">
+                <div class="square green"></div>
+                <div class="square gold"></div>
+                <div class="square red"></div>
+                <div class="square blue"></div>
+            </section>
+            <h1> justify-content: center;</h1>
+            <section class="container center">
+                <div class="square green"></div>
+                <div class="square gold"></div>
+                <div class="square red"></div>
+                <div class="square blue"></div>
+            </section>
+            <h1> align-items: center;</h1>
+            <section class="container align center">
+                <div class="square green"></div>
+                <div class="square short gold"></div>
+                <div class="square red"></div>
+                <div class="square fat blue"></div>
+            </section>
+            <h1> align-items: flex-end;</h1>
+            <section class="container align end">
+                <div class="square green"></div>
+                <div class="square short gold"></div>
+                <div class="square red"></div>
+                <div class="square fat blue"></div>
+            </section>
+            <h1> align-items: baseline;</h1>
+            <section class="container align base">
+                <div class="square green"></div>
+                <div class="square short gold"></div>
+                <div class="square red"></div>
+                <div class="square fat blue"></div>
+            </section>
+            <h1> flex-grow: 3;</h1>
+            <section class="container">
+                <div class="square grow green"></div>
+                <div class="square grow gold"></div>
+                <div class="square grow red" id="three"></div>
+                <div class="square grow blue"></div>
+            </section>
+        </main>
+    </body>
+</html>
