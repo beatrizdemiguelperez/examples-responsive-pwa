@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catty Music</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Sidecars</h1>
+	 </header>
+
+	<main><!--to contain the main section of the app-->
+		<aside> <!--This represents the sidebar and contained in it are icon sets from font-awesome-->
+			<i class="fa fa-bars"></i>
+			<i class="fa fa-home"></i>
+			<i class="fa fa-search"></i>
+			<i class="fa fa-volume-up"></i>
+			<i class="fa fa-user"></i>
+			<i class="fa fa-spotify"></i>
+			<i class="fa fa-cog"></i>
+			<i class="fa fa-soundcloud"></i>
+		</aside>
+
+
+		<!--This section will house everything other than the sidebar. Yes, we'll make it a flex-container too!-->
+	  <section class="content">
+			<div id="current_song" class="music-head"> <!--First list item: contains music details-->
+				<img src="" /> <!--Album art-->
+				<section class="catty-music"> <!--This will hold other details of the song-->
+					<div>
+						<h1></h1>
+					</div>
+
+					<div> <!--Music controls-->
+						<audio controls="" preload="none">
+							<source src="http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars - Tu Peor Pesadilla.mp3" type="audio/mpeg" preload="none">
+						</audio>
+					</div>
+				</section>
+			</div>
+
+			<!--Second list item: Contains a list of all songs displayed-->
+			<ul id="music-list" class="music-list">
+
+			</ul>
+		</section>
+	</main>
+
+	<footer></footer> <!--to contain the music control buttons and song details-->
+
+	<script type="application/javascript" charset="utf-8" src="scripts/app.js"></script>
+	
+</body>
+</html>
