@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: #222;
+  font-size: 17px;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+lh {
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+}
+
+header {
+  background: url('../images/banner.jpg');
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 90%;
+}
+
+header h1{
+  color: white;
+  font-size: 96px;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px 15px 20px 60px;
+}
+
+/*font size for the icons*/
+nav i.fa {
+  font-size: 14px;
+}
+
+.music-head {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background: linear-gradient(0deg, black, #4e4e4e);;
+}
+.music-head img {
+  width: 230px;
+  height: 230px;
+  margin-right: 15px;
+}
+
+.music-head h1 {
+  color: white;
+}
+
+.category-head {
+  font-weight: 700;
+  margin: 0;
+  margin: 15px 15px;
+  text-transform: uppercase;
+}
+
+.category-head:before {
+  content: "\f001";
+  padding: 6px;
+  margin: 8px;
+}
+
+.songs-list {
+  padding: 5px 10px 0px;
+}
+
+.song {
+  display: flex;
+  min-height: 45px;
+}
+
+.song .index:before {
+  content: "\f04b";
+  font: normal normal normal 14px/1 FontAwesome;
+  padding: 6px;
+  margin: 8px;
+}
+
+.song p{
+  padding: 5px;
+}
+
+.song .title {
+  width: 800px;
+}
+
+li.song:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+
+.song:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+.albums-list {
+  margin: 0 auto;
+}
+
+.album {
+  float: left;
+  margin: 3px 35px;
+}
