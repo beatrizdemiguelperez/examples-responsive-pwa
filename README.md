@@ -8,3 +8,7 @@ There are several folders:
 * Metric units [Link](medidas/unidades-de-medida.html)
 * See the different between adding meta viewport or not [With](meta-viewport/with.html) / [Without](meta-viewport/without.html)
 * PWA sample manifest [Link](pwa/manifest/manifest.html) and some workbox service worker [Link](pwa/workbox-cache/index.html)
+
+Now you should be able to transform this webpage into a PWA!
+
+Here we have the challenge! [Link](challenge/index.html)
