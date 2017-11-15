@@ -1,11 +1,3 @@
-/*
-=======================================================
-There's a lot of css3 selectors stuff in here. I explain the
-tricky ones but feel free to look up anything I've missed.
-=======================================================
-*/
-
-
 * {
 	box-sizing: border-box;
 }
@@ -16,19 +8,21 @@ body {
 }
 
 body {
-	display: flex; /* flex superpowers activaed! */
-	flex-direction: column; /* Stack the flex-items vertically not the default horizontal view */
 	background-color: #fff;
 	margin: 0;
 	font-family: Lato, sans-serif;
 	color: #222;
-	font-size: 0.9em;
+	font-size: 17px;
 	height: 100%;
 }
 
-main {
-	flex: 1 0 auto; /*fill the available space*/
-	display: flex;
+ul {
+  list-style: none;
+}
+
+lh {
+	width: 100%;
+	padding: 5px 10px 5px 10px;
 }
 
 header {
@@ -42,101 +36,95 @@ header {
 header h1{
  color: white;
  font-size: 5em;
+ margin: 0;
+ text-align: center;
 }
 
-
-aside {
-	flex: 0 0 40px; /*as a flex item: do not grow or shrink. Just stay fixed at 40px*/
-	display: flex; /*Now you're a flex-container, you can decide how your flex-items are laid*/
-	flex-direction: column; /*Stack my flex-items vertically...change the default direction*/
-	justify-content: space-around; /*Interesting...since direction is changed, this works on the vertical direcion*/
-	align-items: center; /*direction is changed! This affects the horizontal direction*/
-	background-color: #f2f2f2; /*make me pretty*/
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #f2f2f2;
+	padding: 20px 15px 20px 60px;
 }
 
 /*font size for the icons*/
-aside i.fa {
+nav i.fa {
 	font-size: 0.9em;
-}
-
-.content {
-	flex: 1 0 auto;
-	display: flex;
-	flex-direction: column;
 }
 
 .music-head {
-  flex: 0 0 280px; /*Same memo, don't grow or shrink - stay at 280px*/
-  display: flex;
+	display: flex;
+	justify-content: space-around;
   padding: 40px;
   background: linear-gradient(0deg, black, #4e4e4e);;
 }
+.music-head img {
+	width: 230px;
+	height: 230px;
+	margin-right: 15px; 
+}
 
-.music-list {
-	flex: 1 0 auto;
-	list-style-type: none;
+.music-head h1 {
+	color: white;
+}
+
+.category-head {
+    font-weight: 700;
+    margin: 0;
+    margin: 15px 15px;
+    text-transform: uppercase;
+}
+
+.category-head:before {
+	content: "\f001";
+	padding: 0 2em;
+	margin: 0.5em;
+}
+
+.songs-list {
 	padding: 5px 10px 0px;
 }
 
-li {
-  display: flex; /*Target each list containing the paragraphs*/
-  padding: 0 20px;
-  min-height: 50px;
-}
-
-li p {
-  flex: 0 0 25%; /*This is the sweet sauce*/
-}
-
-li span.catty-cloud {
-  border: 1px solid black;
-  font-size: 0.6em;
-  padding: 3px;
-}
-
-/* target every even numbered list item. 0, 2, 4...*/
-li:nth-child(2n) {
-  background-color: #f2f2f2;
-}
-
-.catty-music{
-	flex: 1 0 auto;
+.song {
 	display: flex;
-	flex-direction: column;
-	font-weight: 300;
-	color: #fff;
-	padding-left: 50px;
-	letter-spacing: 0.1em;
+	min-height: 45px;
 }
 
-.catty-music div:nth-child(1){
-	margin-bottom: auto;
+.song .index:before { 
+  content: "\f04b";
+  font: normal normal normal 14px/1 FontAwesome;
+  padding: 0 2em;
+  margin: 0.5em;
 }
 
-.catty-music div:nth-child(2){
-	margin-top: 0;
+.song p{
+	padding: 5px;
 }
 
-.catty-music div:nth-child(2) i.fa{
-	font-size: 0.9em;
-	padding: 0 0.7em;
-	font-weight: 300;
+.song .title {
+	width: 800px;
 }
 
-.catty-music div:nth-child(1) p:first-child{
-  font-size: 1.8em;
-  margin: 0 0 10px;
+li.song:nth-child(2n) {
+	background-color: #f2f2f2;
 }
 
-/* Within the first div child of .catty-musi, this targets all paragraphs except the first */
-.catty-music div:nth-child(1) p:not(:first-child){
-  font-size: 0.9em;
-  margin: 2px 0;
+.song:before {
+    content: "";
+    display: block;
+    background: url("icon.jpg") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
 }
 
-footer {
-	flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px.*/
-	padding: 10px;
-  color: #fff;
-  background-color: black;
+.albums-list {
+	margin: 0 auto;
+}
+
+.album {
+	float: left;
+	margin: 3px 35px;
 }

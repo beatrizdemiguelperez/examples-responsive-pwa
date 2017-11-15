@@ -1,0 +1,31 @@
+{
+    "songs": [
+        {
+            "id": 0,
+            "title": "Tu mejor pesadilla",
+            "img": "images/songs/tu_mejor_pesadilla.jpg",
+            "duration": "1:45",
+            "artist": "Sidecars",
+            "reproduction_count": "1.000.2323",
+            "url": "http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars%20-%20Tu-%20Peor%20Pesadilla.mp3"
+        },
+        {
+            "id": 1,
+            "title": "Fan de ti",
+            "img": "images/songs/fan_de_ti.jpg",
+            "duration": "1:22",
+            "artist": "Sidecars",
+            "reproduction_count": "500.2323",
+            "url": "http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars%20-%20Tu-%20Peor%20Pesadilla.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Contra las cuerdas",
+            "img": "images/songs/contra_las_cuerdas.jpg",
+            "duration": "2:25",
+            "artist": "Sidecars",
+            "reproduction_count": "600.2323",
+            "url": "http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars%20-%20Tu-%20Peor%20Pesadilla.mp3"
+        }
+    ]
+}

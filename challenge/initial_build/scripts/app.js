@@ -1,35 +1,3 @@
-const data = {
-    songs: [
-        {
-            id: 0,
-            title: "Tu mejor pesadilla",
-            img: "images/tu_mejor_pesadilla.jpg",
-            duration: "1:45",
-            artist: "Sidecars",
-            reproduction_count: "1.000.2323",
-            url: "http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars%20-%20Tu-%20Peor%20Pesadilla.mp3"
-        },
-        {
-            id: 1,
-            title: "Fan de ti",
-            img: "images/fan_de_ti.jpg",
-            duration: "1:22",
-            artist: "Sidecars",
-            reproduction_count: "500.2323",
-            url: "http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars%20-%20Tu-%20Peor%20Pesadilla.mp3"
-        },
-        {
-            id: 2,
-            title: "Contra las cuerdas",
-            img: "images/contra_las_cuerdas.jpg",
-            duration: "2:25",
-            artist: "Sidecars",
-            reproduction_count: "600.2323",
-            url: "http://mp3.elgenero.co/mp3/wp-content/uploads/2017/07/Sidecars%20-%20Tu-%20Peor%20Pesadilla.mp3"
-        }
-    ]
-};
-
 /**
  * Create song HTML.
  */
@@ -41,7 +9,7 @@ createSongHTML = (song, index) => {
 
     li.addEventListener("click", function(e) {
         updateCurrentSongHTML(song);
-    });
+    }); 
 
     const p_index = document.createElement('p');
 
@@ -76,7 +44,7 @@ createSongHTML = (song, index) => {
  * Create all songs HTML and add them to the webpage.
  */
 fillSongsHTML = (songs) => {
-    const ul = document.getElementById('music-list');
+    const ul = document.getElementById('songs-list');
 
     songs.forEach((song, index) => {
         ul.append(createSongHTML(song, index));
@@ -96,5 +64,32 @@ updateCurrentSongHTML = (song) => {
     h1.innerText = song.title;
 }
 
-fillSongsHTML(data.songs);
-updateCurrentSongHTML(data.songs[0]);
+
+  /**
+   * Fetch all songs
+   */
+ const fetchSongs = (callback) => {
+    return fetch('data/songs.json').then((resp) => 
+        resp.json()
+    ).then((json) => {
+        const songs = json.songs;
+        callback(null, songs);
+    }).catch(function(error) {
+        console.log(JSON.stringify(error));
+        callback(error, null);
+    });  
+};
+
+/**
+ * Fetch songs as soon as the page is loaded.
+ */
+document.addEventListener('DOMContentLoaded', (event) => {
+    fetchSongs((error, songs) => {
+        if (error) { // Got an error
+            console.error(error);
+        } else {
+            fillSongsHTML(songs);
+            updateCurrentSongHTML(songs[0]);
+        }
+    });
+  });
