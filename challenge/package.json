@@ -1,0 +1,22 @@
+{
+  "name": "examples-responsive-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "browser-sync start --server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatrizdemiguelperez/examples-responsive-pwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beatrizdemiguelperez/examples-responsive-pwa/issues"
+  },
+  "homepage": "https://github.com/beatrizdemiguelperez/examples-responsive-pwa#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
