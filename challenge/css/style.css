@@ -124,6 +124,5 @@ li.song:nth-child(2n) {
 }
 
 .album {
-  float: left;
   margin: 3px 35px;
 }
