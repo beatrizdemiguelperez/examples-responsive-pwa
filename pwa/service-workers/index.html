@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <title>Example one flexbox</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <main>
+            <section id="container">
+                <p>Hello world!</p>
+            </section>
+        </main>
+        <script src="app.js"></script>
+        <script>
+            if(navigator.serviceWorker) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('sw.js').then((reg) => {
+                        console.log('registration ok');
+                    }).catch((e) => {
+                        console.log('registration fails', e);
+                    });
+                });
+            }
+        </script>
+    </body>
+</html>

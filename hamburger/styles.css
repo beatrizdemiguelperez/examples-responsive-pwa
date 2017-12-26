@@ -1,0 +1,146 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+body {
+    font-family: Roboto;
+    font-size: 12px;
+    color: #424242;
+}
+  
+h1, h2, h3, h4, h5 {
+    margin: 0; 
+}
+  
+header, nav, footer, section, article, div {
+    box-sizing: border-box;
+}
+  
+* {
+    box-sizing: border-box;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+*
+* Header
+*
+*/
+
+.header {
+    min-height: 56px;
+}
+
+.header-inner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-title {
+    font-weight: 300;
+    font-size: 3em;
+    margin: 0.75em 0.25em;
+    display: inline-block;
+}
+
+.header-menu {
+    display: none;
+}
+  
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    padding: 24px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 1.5em;
+}
+
+
+/*
+ *
+ * Responsive css
+ *
+ */
+
+@media screen and (max-width: 610px) {
+    
+    /*
+    *
+    * header
+    *
+    */
+    .header-title {
+      font-size: 2em;
+    }
+
+    .header-menu {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        padding: 1em;
+    }
+    .header-menu svg {
+        width: 32px;
+        fill: black;
+    }
+
+    /*
+    *
+    * Navigation
+    *
+    */
+    .nav {
+      z-index: 10;
+      width: 300px;
+      height: 100%;
+      background-color: white;
+      position: absolute;
+      transform: translate(calc(100vw), 0);
+      /* Optionally, we animate the drawer. */
+      transition: transform 0.3s ease;
+    }
+    .nav.open {
+      transform: translate(calc(100vw - 300px), 0);
+    }
+    .nav-item {
+      display: list-item;
+      border-bottom: 1px solid #424242;
+      width: 100%;
+      text-align: left;
+    }
+}

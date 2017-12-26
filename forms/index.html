@@ -1,0 +1,103 @@
+<html lang="en">
+    <head>
+        <title>My app title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
+    </head>
+
+    <body>
+
+        <main id="main">
+            <section class="container">   
+                <form onsubmit="hello()">
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="search" id="name" name="user_name" list="mySuggestion">
+                        <datalist id="mySuggestion">
+                          <option>Apple</option>
+                          <option>Banana</option>
+                          <option>Blackberry</option>
+                          <option>Blueberry</option>
+                          <option>Lemon</option>
+                          <option>Lychee</option>
+                          <option>Peach</option>
+                          <option>Pear</option>
+                        </datalist>
+                    </div>
+                    <div class="input-group">
+                        <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+                        <input type="text" id="myFruit" name="fruit" list="fruitList">
+                            
+                        <datalist id="fruitList">
+                            <label for="suggestion">or pick a fruit</label>
+                            <select id="suggestion" name="altFruit">
+                                <option>Apple</option>
+                                <option>Banana</option>
+                                <option>Blackberry</option>
+                                <option>Blueberry</option>
+                                <option>Lemon</option>
+                                <option>Lychee</option>
+                                <option>Peach</option>
+                                <option>Pear</option>
+                            </select>
+                        </datalist>
+                    </div>
+                    <div class="input-group">
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_mail">
+                    </div>
+                    <div class="input-group">
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message" value="by default this element is filled with this text"></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="select">Select something:</label>
+                        <select id="select" name="simple">
+                            <option>Banana</option>
+                            <option>Cherry</option>
+                            <option>Lemon</option>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend>What is your favorite meal?</legend>
+                        <ul>
+                            <li>
+                                <label for="soup">Soup</label>
+                                <input type="radio" checked id="soup" name="meal" value="soup">
+                            </li>
+                            <li>
+                                <label for="curry">Curry</label>
+                                <input type="radio" id="curry" name="meal" value="curry">
+                            </li>
+                            <li>
+                                <label for="pizza">Pizza</label>
+                                <input type="radio" id="pizza" name="meal" value="pizza">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div class="input-group">
+                        <label for="beans">How many beans can you eat?</label>
+                        <input type="range" name="beans" id="beans" min="0" max="500" step="10">
+                    </div>
+                    <div class="input-group">
+                        <label for="progress">Progress?</label>
+                        <progress id="progress" max="100" value="75">75/100</progress>
+                    </div>
+                    <div class="input-group">
+                        <label for="meter">Meter:</label>
+                        <meter id="meter" min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Send your message</button>
+                    </div>
+                </form> 
+  
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
