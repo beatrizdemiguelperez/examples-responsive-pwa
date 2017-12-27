@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+
+section header {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    background-color: #7f7ff1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#drawer {
+    background-color:#000;
+    width: 90%;
+    height: 90vh;
+    border: 5px solid #7f7ff1;
+}
