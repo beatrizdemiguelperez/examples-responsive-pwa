@@ -11,7 +11,7 @@
 
         <main id="main">
             <section class="container">   
-                <form onsubmit="hello()">
+                <form id="form" onsubmit="hello()">
                     <div class="input-group">
                         <label for="name">Name:</label>
                         <input type="search" id="name" name="user_name" list="mySuggestion">
@@ -27,8 +27,12 @@
                         </datalist>
                     </div>
                     <div class="input-group">
+                        <label for="myNumber" >What is your favorite number?</label>
+                        <input id="myNumber" type="number" max="10" min="1" value="11">
+                    </div>
+                    <div class="input-group">
                         <label for="myFruit">What is your favorite fruit? (With fallback)</label>
-                        <input type="text" id="myFruit" name="fruit" list="fruitList">
+                        <input type="text" id="myFruit" name="fruit" list="fruitList" required>
                             
                         <datalist id="fruitList">
                             <label for="suggestion">or pick a fruit</label>
@@ -55,7 +59,7 @@
 
                     <div class="input-group">
                         <label for="select">Select something:</label>
-                        <select id="select" name="simple">
+                        <select id="select" name="simple" required>
                             <option>Banana</option>
                             <option>Cherry</option>
                             <option>Lemon</option>
@@ -93,6 +97,9 @@
                     </div>
                     <div class="button">
                         <button type="submit">Send your message</button>
+                    </div>
+                    <div class="button">
+                        <button disabled>Save draft</button>
                     </div>
                 </form> 
   

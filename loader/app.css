@@ -1,0 +1,49 @@
+.header {
+    width: 100%;
+    height: 56px;
+    color: #FFF;
+    background: rgb(7, 22, 105);
+    display: flex;
+    align-items: center;
+}
+
+.header_title {
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.loader {
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 400;
+}
+
+.loader #spinner {
+    stroke: rgb(7, 22, 105);
+    stroke-width: 3px;
+    transform-origin: 50%;
+    animation: line 1.6s cubic-bezier(.4,0,.2,1) infinite,rotate 1.6s linear infinite;
+}
+
+.is-hidden {
+    display: none;
+}
+
+/*
+* CSS3 animations
+*/
+
+@keyframes line{
+    0%{
+        stroke-dasharray:2,85.964;
+        transform:rotate(0)
+    }
+    50%{
+        stroke-dasharray:65.973,21.9911;
+        stroke-dashoffset:0}100%{stroke-dasharray:2,85.964;
+        stroke-dashoffset:-65.973;
+        transform:rotate(90deg)
+    }
+}

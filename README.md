@@ -18,6 +18,7 @@ There are several folders:
 * Accesible modal window [Link](http://gdkraus.github.io/accessible-modal-dialog/) 
 * Performance optimization - Scroll load [Link](scroll-load/index.html)
 * Mobile touch events [Link](touch-events/index.html)
+* Loader css3 animation [Link](loader/index.html)
 
 Now you should be able to transform this webpage into a PWA!
 
