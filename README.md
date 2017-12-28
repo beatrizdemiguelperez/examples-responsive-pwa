@@ -19,6 +19,7 @@ There are several folders:
 * Performance optimization - Scroll load [Link](scroll-load/index.html)
 * Mobile touch events [Link](touch-events/index.html)
 * Loader css3 animation [Link](loader/index.html)
+* App Shell [Link](https://app-shell.appspot.com/)
 
 Now you should be able to transform this webpage into a PWA!
 
