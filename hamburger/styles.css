@@ -43,6 +43,7 @@ ul {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
 }
 
 .header-title {
@@ -110,8 +111,6 @@ ul {
 
     .header-menu {
         display: inline-block;
-        position: absolute;
-        right: 0;
         padding: 1em;
     }
     .header-menu svg {
@@ -126,16 +125,20 @@ ul {
     */
     .nav {
       z-index: 10;
-      width: 300px;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      background: #FAFAFA;
+      width: 304px;
       height: 100%;
-      background-color: white;
-      position: absolute;
-      transform: translate(calc(100vw), 0);
-      /* Optionally, we animate the drawer. */
-      transition: transform 0.3s ease;
+      overflow: hidden;
+      box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+      will-change: transform;
+      transform: translateX(-102%);
     }
     .nav.open {
-      transform: translate(calc(100vw - 300px), 0);
+        transform: translateX(0px);
     }
     .nav-item {
       display: list-item;

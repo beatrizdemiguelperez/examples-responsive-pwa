@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>App Shell</title>
+  <link rel="manifest" href="manifest.json">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Shell</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Shell de app</h1>
+  </header>
+
+  <nav class="nav">
+     ...
+  </nav>
+
+  <main class="main">
+    ...
+  </main>
+
+  <div class="dialog-container">
+    ...
+  </div>
+
+  <div class="loader">
+    <!-- Show a spinner or placeholders for content -->
+  </div>
+
+  <script src="app.js" async></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').then((registration) => {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch((err) => {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        })
+    }
+  </script>
+</body>
+</html>
