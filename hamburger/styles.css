@@ -139,6 +139,7 @@ ul {
     }
     .nav.open {
         transform: translateX(0px);
+        pointer-events: auto;
     }
     .nav-item {
       display: list-item;
